@@ -1,0 +1,201 @@
+/* type selector */
+*{
+    box-sizing: border-box;
+}
+body{
+    color: #858585;
+    margin: 0;
+    font: 1em/1.5 "sofia";
+}
+ul, 
+ol{
+    margin:30px 0;
+}
+li{
+    margin-bottom: 10px;
+}
+
+h1{
+    font-size: 90px;
+        color: white;
+        text-transform: capitalize;
+        font-weight: normal;
+        line-height: 1.3;
+        text-shadow: -5px -8px 5px rgba(0, 0, 0, .8);
+        margin:12px 0 0 ;
+        font-size: 10vw;
+}
+h2{
+    font-size: 53px;
+    text-decoration: underline;
+    font-weight: normal;
+    line-height: 1.1;
+     margin-bottom: .5em; /*26px */
+}
+h3{
+    font-size: 20px;
+    color: #434343;
+    line-height: 1.2;
+    margin-bottom: 1.7em;/*34px*/
+}
+  img{
+      max-width: 100%;
+      margin-bottom: 20px;
+      border-radius: 25px;
+  }  
+/* pseudo selector */
+a:link{
+    color:rgba(24, 25, 233, .9);
+    text-decoration: none;
+}
+
+a:visited{
+    color: coral;
+}
+
+a:hover{
+    color: brown;
+}
+a:active{
+    color: crimson;
+}
+a:focus{
+    color: white;
+    background-color: orange;
+}
+
+/* class selector */
+.main-header{
+    
+    height: 850px;
+    padding-top: 170px;
+    background: linear-gradient(#ffa949, transparent 90%),
+                linear-gradient(0deg, #fff,transparent),       
+     orangered url('../img/pexels-photo-6976001.jpeg')   no-repeat center;
+background-size: cover;
+}
+.title{/* the title font-size is devided by the body font-size (26/16)
+    note 1em is equalvalent to 16px*/
+    color: white;
+    font-size: 1.625em;
+    letter-spacing: .065em;
+    font-weight: 200;
+    border-bottom: 2px solid;
+    padding-bottom: 10px; 
+}
+/* layout sytles---------- */
+.primary-content, 
+.secondary-content{
+width: 75%;
+margin: auto;
+max-width: 900px;
+}
+.t-border{
+    border-bottom: 2px solid #858585;
+}
+.primary-content,
+.main-header{
+   text-align: center;
+}
+.callout{
+    font-size: 1.25em;
+    border-bottom: 3px solid;
+    padding: 0 9px 3px;
+    margin: 20px;
+    display: inline-block;
+}
+.classic-design{
+    color: white;
+    background-color: #434a52;
+    padding:  18% 24%;
+    border-top: 10px solid #ffa949;
+    margin: 105px 0 60px;
+     background: orangered url('../img/pexels-photo-1816225.jpeg')   no-repeat center;
+background-size: cover;
+background-attachment: fixed;
+box-shadow: 0 20px 12px 4px rgba(0, 0, 0, .8);
+border-radius: 25px;
+}
+.classic-design{
+    padding: 10% 20%;
+    margin: 50px 0 20px;
+}
+/*id selector*/
+#main-footer{
+    text-align: center;
+}
+/* floated column--------- */
+.resort,
+ .tips{
+width: 46.5%;
+margin-top: 20px;
+}
+.tips{
+    float: left;
+}
+.resort{
+    float: right;
+}
+/* float clearfix------ *//*this is use to clear content overlapping*/
+.group::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* media queries */
+ /* @media (max-width: 960px) { 
+
+    body{
+        background-color:royalblue;
+    }
+}
+@media (max-width: 580px) {  
+
+ body{
+ background-color:forestgreen;
+
+ } 
+}
+@media (min-width: 581px) and (max-width: 700px) {
+
+    body {
+        background-color:darkred;
+    }
+    p{
+        color: white;
+    } */
+@media(max-width:1024px){
+.primary-content,
+.secondary-content{
+    width: 90%;
+}
+}
+@media(max-width:768px){
+    .primary-content,
+    .secondary-content{
+        width: 100%; 
+        padding: 20px;
+        border-top: none;
+    }
+    .main-header{
+        max-height: 580px;
+        padding: 50px 25px 0;
+    }
+    .title{
+        font-size: 1.3rem;
+        border: none;
+    }
+    hi{
+        font-size: 5rem;
+        line-height: 1.2;
+    }
+}
+.resort,
+ .tips{
+     float:none;
+     width: 100%;
+ }
+#main-footer{
+    padding: 20px 0;
+}
